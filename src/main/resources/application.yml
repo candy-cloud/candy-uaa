@@ -1,0 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.10.4.158:7010/eureka/,http://10.10.4.168:7010/eureka/,http://10.10.4.176:7010/eureka/
+#    fetch-registry: false
+#    register-with-eureka: false
+spring:
+  application:
+    name: fintech-uaa
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.16.51.63:3306/boss?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: super
+    password: super@1
+  main:
+    allow-bean-definition-overriding: true
+feign:
+  hystrix:
+    enabled: true
+server:
+  port: 8000
